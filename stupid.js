@@ -58,8 +58,8 @@ try {
 }
 
 web3.version.getNetwork((err, netId) => {
-  if (netId != 1) {
-    $("#netwarn").html("Please switch MetaMask to the <b>MainNet</b> network. "+netId);
+  if (netId != 3) {
+    $("#netwarn").html("Please switch MetaMask to the <b>Ropsten</b> network. "+netId);
   }
 })
 
@@ -93,7 +93,7 @@ console.log("stupidContract is "+stupidContract);
 
 stupidTable = document.getElementById("stupidTable");
 
-  stupidTable.countStupid(function (err, result){
+  stupidContract.countStupid(function (err, result){
     console.log("count is "+result);
     let count = result;
     for(let x=0;x<count;++x)
