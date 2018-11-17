@@ -98,17 +98,17 @@ stupidTable = document.getElementById("stupidTable");
     let count = result;
     for(let x=0;x<count;++x)
     {
-	    let row=discoTable.insertRow(-1);
+	    let row=stupidTable.insertRow(-1);
 	    row.insertCell().innerText=x;
 	    row.insertCell().innerText="";
     }
 	  
     for(let x=0;x<count;++x)
     {
-	    discoData.stupidStuff(x,function(err,res){
+	    stupidContract.stupidStuff(x,function(err,res){
 		    console.log(x+": "+res);
 		    if(res=="")return;
-		    discoTable.rows[x+1].cells[1].innerText=res;
+		    stupidTable.rows[x+1].cells[1].innerText=res;
 	    });
     }
   });
