@@ -119,7 +119,7 @@ function insert() {
 
   let stupidThing = $("#stupidThing").val();
 
-  var result = discoBall.addStupid(stupidThing, function(err, res) {
+  var result = stupidContract.addStupid(stupidThing, function(err, res) {
     console.log(res);
   });
 
