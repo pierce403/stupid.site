@@ -50,6 +50,8 @@ abi=[
 
 console.log("OMG HERE WE GO");
 
+ethereum.enable(); // well this was annoying
+
 try {
   console.log("HI! your default account is " + web3.eth.defaultAccount);
 } catch (e) {
