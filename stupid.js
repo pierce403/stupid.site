@@ -108,7 +108,7 @@ stupidTable = document.getElementById("stupidTable");
 	    stupidContract.stupidStuff(count-x,function(err,res){
 		    console.log(x+": "+res);
 		    if(res=="")return;
-		    stupidTable.rows[count-x+1].cells[1].innerText=res;
+		    stupidTable.rows[x].cells[1].innerText=res;
 	    });
     }
   });
