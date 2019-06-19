@@ -96,14 +96,14 @@ stupidTable = document.getElementById("stupidTable");
   stupidContract.countStupid(function (err, result){
     console.log("count is "+result);
     let count = result;
-    for(let x=0;x<count;++x)
+    for(let x=(count-10);x<count;++x)
     {
 	    let row=stupidTable.insertRow(-1);
 	    row.insertCell().innerText=x;
 	    row.insertCell().innerText="";
     }
 	  
-    for(let x=0;x<count;++x)
+    for(let x=(count-10);x<count;++x)
     {
 	    stupidContract.stupidStuff(x,function(err,res){
 		    console.log(x+": "+res);
