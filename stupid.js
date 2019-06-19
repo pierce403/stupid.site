@@ -103,9 +103,9 @@ stupidTable = document.getElementById("stupidTable");
 	    row.insertCell().innerText="";
     }
 	  
-    for(let x=(count-10);x<count;++x)
+    for(let x=0;x<10;++x)
     {
-	    stupidContract.stupidStuff(x,function(err,res){
+	    stupidContract.stupidStuff(count-x,function(err,res){
 		    console.log(x+": "+res);
 		    if(res=="")return;
 		    stupidTable.rows[x+1].cells[1].innerText=res;
